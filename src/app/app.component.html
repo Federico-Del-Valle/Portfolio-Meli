@@ -5,13 +5,10 @@
 
     <div class="parte-izq">
       <div style="padding: 16px;">
-        <div>
-          @for(numero of instrumentos; track $index) {
-            <ul>{{numero}}</ul>
+        <div class="d-flex flex-column">
+          @for(proyecto of proyectos; track $index) {
+            <img width="80px" src="{{proyecto.img}}">
           }
-        </div>
-        <div>
-          <img src="" alt="Logo">
         </div>
       </div>
       <div></div>
@@ -50,11 +47,11 @@
           <div class="titulo-informacion-prod">
             <span>Informacion del producto</span>
           </div>
-          @for(info of informacionProd; track $index){
             <div class="contenido-info-prod">
-              <li>{{info}}</li>
+              <li>{{proyectos[1].titulo}}</li>
+              <span> Descripcion: {{proyectos[1].descripcion}}</span>
+              <li> Lenguajes: {{proyectos[1].lenguajes}}</li>
             </div>
-          }
 
         </div>
 

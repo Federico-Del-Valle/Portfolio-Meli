@@ -1,0 +1,22 @@
+[
+    {
+      "id":1,
+      "titulo":"Portfolio",
+      "descripcion": "Portolio personal",
+      "lenguajes":"Typescript, Html, Css, Angular",
+      "img": "/assets/img/FedeCV.jpeg"
+    },
+    {
+      "id":2,
+      "titulo":"Kevin trolo",
+      "descripcion":"Proyecto que muestra demostar lo trolo que es kevin",
+      "lenguajes": "Java,SPRING",
+      "img": "/assets/img/proyectEnProceso.jpg"
+    },
+    {
+      "id":3,
+      "titulo":"Reproductor de musica",
+      "descripcion":"Proyecto final realizado para globant CodeYourFuture",
+      "lenguajes":"C, JAVA"
+    }
+]
