@@ -1,0 +1,9 @@
+.buscador-proyectos{
+  position: relative;
+}
+
+.lupa-buscar{
+  position: absolute;
+  left: 78%;
+  top: 2%;
+}

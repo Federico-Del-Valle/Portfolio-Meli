@@ -13,8 +13,6 @@
         <div>
           <img src="" alt="Logo">
         </div>
-
-
       </div>
       <div></div>
     </div>
@@ -36,6 +34,28 @@
           <div class="titulo">
             <h1 class="nombre">Federico Del Valle Software Developer</h1>
           </div>
+        </div>
+        <div class="precio-container">
+          <div class="d-flex flex-column justify-content-start">
+            <span style="font-size: 36px; font-weight: 300;">Gratis</span>
+            <span style="font-size: 18px; font-weight: 400;">datos...</span>
+            <span>datos...</span>
+
+          </div>
+          <div>
+            <a href="">Ver informacion del producto</a>
+          </div>
+        </div>
+        <div>
+          <div class="titulo-informacion-prod">
+            <span>Informacion del producto</span>
+          </div>
+          @for(info of informacionProd; track $index){
+            <div class="contenido-info-prod">
+              <li>{{info}}</li>
+            </div>
+          }
+
         </div>
 
 

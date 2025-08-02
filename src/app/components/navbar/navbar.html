@@ -1,28 +1,39 @@
 <div class="d-flex flex-column" style="padding: 10px 70px; width: 100%; background-color: #FFE600; gap: 20px;">
   <div class="d-flex justify-content-between">
-      <div> <img src="Logo.png" width="80px" alt=""></div>
-      <div>tu mama</div>
+      <div> <img src="Logo.png" width="100px" alt=""></div>
+      <form class="d-flex" (ngSubmit)="onSearch()" style="width: 70%; height: 50px;">
+        <input
+          class="form-control me-2 buscador-proyectos"
+          type="search"
+          placeholder="Buscar proyectos y más..."
+          aria-label="Buscar"
+
+          name="search"
+        />
+        <button class="btn lupa-buscar" type="submit">
+          <img width="20px" src="lupa.svg" alt=""> <!-- usa bootstrap-icons o un svg -->
+        </button>
+      </form>
       <div>la chupa</div>
   </div>
   <div class="d-flex justify-content-between" style="gap: 20px;">
-    <div>
-      <p class="m-0">UBICACION</p>
+    <div class="d-flex justify-content-between">
+      <img width="30px" src="location-svgrepo-com.svg" alt="Ubicacion">
+      <p class="m-0">Villa Luzuriaga</p>
     </div>
-    <div class="d-flex">
-      <li>Categorias</li>
-      <li>Ofertas</li>
+    <ul class="d-flex list-unstyled gap-3 mb-0 align-items-center">
+      <li>Sobre mi</li>
+      <li>Proyectos</li>
       <li>Cupones</li>
       <li>Supermercado</li>
-      <li>Moda</li>
-      <li>Vender</li>
-      <li>Ayuda</li>
-    </div>
-    <div class="d-flex">
+    </ul>
+
+    <ul class="d-flex list-unstyled gap-3 mb-0 align-items-center">
       <li>Crea tu cuenta</li>
       <li>Ingresa</li>
       <li>Mis compras</li>
-      <img src="" alt="Carrito">
-    </div>
+      <img width="20px" src="cart.svg" alt="Carrito">
+    </ul>
   </div>
 
 </div>
