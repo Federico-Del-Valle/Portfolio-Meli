@@ -1,0 +1,26 @@
+<div class="d-flex flex-column contenedor-interno" style="gap: 16px;">
+  <div class="barras">
+
+  </div>
+  <div class="contenedor-principal">
+    <div class="parte-der">
+
+    </div>
+    <div class="parte-izq">
+      <div class="d-flex flex-column contenedor-info">
+        @for (proyecto of proyectos; track $index) {
+          <a routerLink="/portfolio">
+            <div class="d-flex flex-row justify-content-between contenedor-proy">
+              <img class="foto" src="{{proyecto.img}}">
+              <div class="derecha-proyecto" style="width: 50%;">
+                <h3>{{proyecto.titulo}}</h3>
+              </div>
+            </div>
+
+          </a>
+        }
+
+      </div>
+    </div>
+  </div>
+</div>

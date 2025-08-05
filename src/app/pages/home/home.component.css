@@ -1,0 +1,19 @@
+.contenedor-interno{
+  width: 80%;
+  margin: auto;
+  background-color: white;
+}
+
+.contenedor-proy{
+  border-bottom: 1px solid rgb(121, 121, 121);
+  padding: 8px 0;
+}
+
+
+.foto{
+  width: 196px;
+  height: 196px;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}

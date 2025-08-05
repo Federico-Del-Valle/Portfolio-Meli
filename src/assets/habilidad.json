@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "habilidad": "Typescript",
+    "img": "assets/icons/typescript-icon.svg"
+  },
+  {
+    "id": 2,
+    "habilidad": "Html",
+    "img": "assets/icons/html-icon.svg"
+  },
+  {
+    "id": 3,
+    "habilidad": "Angular",
+    "img": "assets/icons/angular-icon.svg"
+  },
+  {
+    "id": 4,
+    "habilidad": "Java",
+    "img": "assets/icons/java-icon.svg"
+  }
+]

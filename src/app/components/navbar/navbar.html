@@ -1,6 +1,8 @@
 <div class="d-flex flex-column" style="padding: 10px 70px; width: 100%; background-color: #FFE600; gap: 20px;">
   <div class="d-flex justify-content-between">
-      <div> <img src="assets/icons/Logo.png" width="100px" alt=""></div>
+      <div>
+        <a routerLink=""class="nav-link"><img src="assets/icons/Logo.png" width="100px" alt=""></a>
+      </div>
       <form class="d-flex" (ngSubmit)="onSearch()" style="width: 70%; height: 50px;">
         <input
           class="form-control me-2 buscador-proyectos"
@@ -23,7 +25,7 @@
     </div>
     <ul class="d-flex list-unstyled gap-3 mb-0 align-items-center">
       <li>Sobre mi</li>
-      <li>Proyectos</li>
+      <a routerLink="/portfolio" class="nav-link">Portfolio</a>
       <li>Contacto</li>
     </ul>
 
