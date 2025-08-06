@@ -10,6 +10,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit{
+  public catDistintas?: number;
 
   public proyectos: Proyecto[] = [];
 
@@ -20,7 +21,26 @@ export class HomeComponent implements OnInit{
       next: data=> this.proyectos = data,
       error: err=> console.error('Error cargando proyectos', err)
     })
-
+    this.catDistintas = this.contarLenguajesDistintos(this.proyectos);
   }
+
+  public contarProyectos(proyectos: Proyecto[], buscar: any){
+    return proyectos.filter(item => item === buscar).length;
+  }
+
+  contarLenguajesDistintos(proyectos: Proyecto[]): number {
+    const conjuntoLenguajes = new Set<string>();
+
+    for (let proyecto of proyectos) {
+      const lenguajes = proyecto.lenguajes!
+        .split(',')
+        .map(l => l.trim());
+
+      lenguajes.forEach(lenguaje => conjuntoLenguajes.add(lenguaje));
+    }
+
+    return conjuntoLenguajes.size;
+  }
+
 
 }

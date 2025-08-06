@@ -2,11 +2,23 @@
   <div class="barras">
 
   </div>
-  <div class="contenedor-principal">
-    <div class="parte-der">
+  <div class="d-flex flex-row justify-content-between contenedor-principal">
 
-    </div>
     <div class="parte-izq">
+      <div >
+        <span>Ingenieros Informaticos > Desarrolladores de Software</span>
+        <h1>Federico Del Valle</h1>
+        <span>1 resultado</span>
+      </div>
+      <div>
+        @if (catDistintas) {
+          <h3>Categorias</h3>
+
+        }
+
+      </div>
+    </div>
+    <div class="parte-der">
       <div class="d-flex flex-column contenedor-info">
         @for (proyecto of proyectos; track $index) {
           <a routerLink="/portfolio">
@@ -17,7 +29,7 @@
                 <span>Por Federico Del Valle</span>
                 <div class="contenedor-datos-proy">
                   <div class="der">
-                    <div>
+                    <div class="d-flex flex-column">
                       <span>$157</span>
                       <span>$180</span>
                       <span>6 cuotas de $1500</span>

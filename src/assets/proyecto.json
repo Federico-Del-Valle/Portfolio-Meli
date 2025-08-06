@@ -8,15 +8,23 @@
     },
     {
       "id":2,
-      "titulo":"Kevin trolo",
+      "titulo":"Escape Web",
       "descripcion":"Proyecto que muestra demostar lo trolo que es kevin",
-      "lenguajes": "Java,SPRING",
+      "lenguajes": "Typescript,SPRING, Java",
       "img": "/assets/img/proyectEnProceso.jpg"
     },
     {
       "id":3,
       "titulo":"Reproductor de musica",
       "descripcion":"Proyecto final realizado para globant CodeYourFuture",
-      "lenguajes":"C, JAVA"
+      "lenguajes":"C, JAVA",
+      "img": "/assets/img/proyectoEnProceso2.jpg"
+    },
+    {
+      "id":3,
+      "titulo":"App de estacionamiento",
+      "descripcion":"Proyecto de control de estacionamiento en la ciudad de Buenos Aires",
+      "lenguajes":"Angular, JAVA, MySql, Hibernate, Spring",
+      "img": "/assets/img/proyectoEnProceso2.jpg"
     }
 ]
