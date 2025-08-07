@@ -11,8 +11,12 @@
         <span>1 resultado</span>
       </div>
       <div>
-        @if (catDistintas) {
+        @if (categorias) {
           <h3>Categorias</h3>
+          @for (categoria of categorias; track $index) {
+            <h5 style="font-size: 14px; font-weight: 300; color:#666 ;">{{categoria.nombre}}
+               <span style="color: #999;">({{categoria.cantidad}})</span></h5>
+          }
 
         }
 
@@ -21,9 +25,9 @@
     <div class="parte-der">
       <div class="d-flex flex-column contenedor-info">
         @for (proyecto of proyectos; track $index) {
-          <a routerLink="/portfolio">
-            <div class="d-flex flex-row justify-content-between contenedor-proy">
-              <img class="foto" src="{{proyecto.img}}">
+          <a [routerLink]= "['/portfolio', proyecto.id]">
+            <div class="d-flex flex-row contenedor-proy" style="gap: 24px;">
+              <img class="foto" src="{{proyecto.imgPortada}}">
               <div class="derecha-proyecto" style="width: 50%;">
                 <h3>{{proyecto.titulo}}</h3>
                 <span>Por Federico Del Valle</span>

@@ -1,30 +1,62 @@
 [
     {
-      "id":1,
+      "id":0,
       "titulo":"Portfolio",
       "descripcion": "Portolio personal",
       "lenguajes":"Typescript, Html, Css, Angular",
-      "img": "/assets/img/FedeCV.jpeg"
+      "imgPortada": "/assets/img/FedeCV.jpeg",
+      "img": [
+      "/assets/img/proyectoEnProceso2.jpg",
+      "/assets/img/proyectoEnProceso2.jpg",
+      "/assets/img/proyectoEnProceso2.jpg"
+    ]
+    },
+    {
+      "id":1,
+      "titulo":"Escape Web",
+      "descripcion":"Juego de escape room virtual, realizado a modo de practica para mejorar mis habilidades como desarrollador web",
+      "lenguajes": "Typescript,SPRING, Java",
+      "imgPortada": "/assets/img/proyectEnProceso.jpg",
+      "img": [
+      "/assets/img/proyectoEnProceso2.jpg",
+      "/assets/img/proyectoEnProceso2.jpg",
+      "/assets/img/proyectoEnProceso2.jpg"
+    ]
     },
     {
       "id":2,
-      "titulo":"Escape Web",
-      "descripcion":"Proyecto que muestra demostar lo trolo que es kevin",
-      "lenguajes": "Typescript,SPRING, Java",
-      "img": "/assets/img/proyectEnProceso.jpg"
-    },
-    {
-      "id":3,
       "titulo":"Reproductor de musica",
       "descripcion":"Proyecto final realizado para globant CodeYourFuture",
       "lenguajes":"C, JAVA",
-      "img": "/assets/img/proyectoEnProceso2.jpg"
+      "imgPortada": "/assets/img/proyectoEnProceso2.jpg",
+      "img": [
+      "/assets/img/proyectoEnProceso2.jpg",
+      "/assets/img/proyectoEnProceso2.jpg",
+      "/assets/img/proyectoEnProceso2.jpg"
+    ]
     },
     {
       "id":3,
       "titulo":"App de estacionamiento",
       "descripcion":"Proyecto de control de estacionamiento en la ciudad de Buenos Aires",
+      "lenguajes":"Angular, JAVA, MySql, Spring",
+      "imgPortada": "/assets/img/proyectoEnProceso2.jpg",
+      "img": [
+      "/assets/img/proyectoEnProceso2.jpg",
+      "/assets/img/proyectoEnProceso2.jpg",
+      "/assets/img/proyectoEnProceso2.jpg"
+    ]
+    },
+    {
+      "id":4,
+      "titulo":"Wise capital",
+      "descripcion":"Gestor de instrumentos realizado para Wise capital. Me desempeñe como Full Stack Developer en el desarrollo de una aplicacion de control de instrumentos",
       "lenguajes":"Angular, JAVA, MySql, Hibernate, Spring",
-      "img": "/assets/img/proyectoEnProceso2.jpg"
+      "imgPortada": "/assets/img/proyectoEnProceso2.jpg",
+      "img": [
+      "/assets/img/proyectoEnProceso2.jpg",
+      "/assets/img/proyectoEnProceso2.jpg",
+      "/assets/img/proyectoEnProceso2.jpg"
+    ]
     }
 ]

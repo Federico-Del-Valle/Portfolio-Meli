@@ -5,6 +5,6 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'portfolio', component: PortfolioComponent },
+  { path: 'portfolio/:id', component: PortfolioComponent },
   { path: '**', redirectTo: '' }
 ];

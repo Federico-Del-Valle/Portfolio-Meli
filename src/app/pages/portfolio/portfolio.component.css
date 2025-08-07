@@ -4,6 +4,10 @@
   margin: auto;
 }
 
+.parte-der{
+  padding: 16px;
+}
+
 .contenedor-info{
   background-color: #ffff;
   display: grid;
@@ -31,16 +35,39 @@
     display: block;
   }
 }
+
+.foto-principal{
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+
 .contenedor-habilidades{
   width: 100%;
   background-color: blue;
   margin: auto;
-
 }
+
 .habilidad-container{
     width: 80px;
     height: 80px;
     object-fit: cover;
     border-radius: 4px;
     display: block;
+}
+
+
+.descripcion-container{
+  padding: 0 24px;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+.titulo-descripcion{
+  font-size: 24px;
+}
+.descripcion{
+  font-size: 20px;
+  color: #999;
 }

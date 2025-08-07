@@ -10,7 +10,8 @@ import { RouterLink } from '@angular/router';
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit{
-  public catDistintas?: number;
+  categorias: { nombre: string, cantidad: number }[] = [];
+
 
   public proyectos: Proyecto[] = [];
 
@@ -18,29 +19,30 @@ export class HomeComponent implements OnInit{
 
   ngOnInit(): void {
     this.proySrv.getAll().subscribe({
-      next: data=> this.proyectos = data,
-      error: err=> console.error('Error cargando proyectos', err)
+      next: data=>{
+        this.proyectos = data,
+        this.categorias = this.generarCategorias()
+      },
+      error: err=> console.error('Error cargando proyectos', err),
     })
-    this.catDistintas = this.contarLenguajesDistintos(this.proyectos);
   }
 
-  public contarProyectos(proyectos: Proyecto[], buscar: any){
-    return proyectos.filter(item => item === buscar).length;
-  }
+  generarCategorias(): any[] {
+    const contador: Record<string, number> = {};
 
-  contarLenguajesDistintos(proyectos: Proyecto[]): number {
-    const conjuntoLenguajes = new Set<string>();
+    for (let proyecto of this.proyectos) {
+      const lenguajes = proyecto.lenguajes!.split(',').map(l => l.trim().toUpperCase());
 
-    for (let proyecto of proyectos) {
-      const lenguajes = proyecto.lenguajes!
-        .split(',')
-        .map(l => l.trim());
-
-      lenguajes.forEach(lenguaje => conjuntoLenguajes.add(lenguaje));
+      for (let lenguaje of lenguajes) {
+        contador[lenguaje] = (contador[lenguaje] || 0) + 1;
+      }
     }
-
-    return conjuntoLenguajes.size;
+    return this.categorias = Object.entries(contador).map(([nombre, cantidad]) => ({
+      nombre,
+      cantidad
+    }));
   }
+
 
 
 }

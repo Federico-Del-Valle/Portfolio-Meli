@@ -7,8 +7,8 @@
         <div class="d-flex flex-row justify-content-between">
           <div class="d-flex flex-column">
             <div class="foto-container d-flex flex-column" style="gap: 4px;">
-              @for(proyecto of proyectos; track $index) {
-                <img class="foto" src="{{proyecto.img}}">
+              @for(foto of proyectos[idProyecto].img; track $index) {
+                <img class="foto" [src]="foto">
               }
 
             </div>
@@ -16,7 +16,7 @@
           </div>
 
           <figure>
-            <img src="{{proyectos[0].img}}" alt=""></figure>
+            <img class="foto-principal" src="{{proyectos[idProyecto].imgPortada}}" alt=""></figure>
         </div>
       </div>
       <div></div>
@@ -37,7 +37,7 @@
             </div>
           </div>
           <div class="titulo">
-            <h1 class="nombre">Federico Del Valle Software Developer</h1>
+            <h1 class="nombre">{{proyectos[idProyecto].titulo}}</h1>
           </div>
         </div>
         <div class="precio-container">
@@ -56,9 +56,8 @@
             <span>Informacion del producto</span>
           </div>
             <div class="contenido-info-prod">
-              <li>{{proyectos[0].titulo}}</li>
-              <span> Descripcion: {{proyectos[0].descripcion}}</span>
-              <li> Lenguajes: {{proyectos[0].lenguajes}}</li>
+
+              <li> Lenguajes: {{proyectos[idProyecto].lenguajes}}</li>
             </div>
 
         </div>
@@ -69,9 +68,19 @@
     </div>
 
 
+    <div class="descripcion-container">
+      <div class="titulo-descripcion">
+        <span>Descripcion</span>
+      </div>
+      <div class="descripcion">
+        <span>{{proyectos[idProyecto].descripcion}}
+        </span>
+      </div>
+    </div>
 
   </div>
-  <div class="contenedor-habilidades">
+
+  <!-- <div class="contenedor-habilidades">
 
     <div class="habilidades">
       <div class="d-flex justify-content-center" style="gap: 8px;">
@@ -82,7 +91,7 @@
 
     </div>
 
-  </div>
+  </div> -->
 
 </div>
 

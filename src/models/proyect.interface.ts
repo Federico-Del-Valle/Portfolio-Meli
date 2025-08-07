@@ -3,7 +3,8 @@ export interface Proyecto{
   titulo?: string;
   descripcion?: string;
   lenguajes?: string;
-  img?: string;
+  imgPortada: string;
+  img?: string[];
   url?: string;
   repo?: string;
 }

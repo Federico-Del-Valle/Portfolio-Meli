@@ -2,7 +2,7 @@ import { ProyectsService } from '../../../services/proyects.service';
 import { Proyecto } from '../../../models/proyect.interface';
 import { Habilidad } from '../../../models/habilidades.interface';
 import { Component, OnInit, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ActivatedRoute, RouterOutlet } from '@angular/router';
 import { Navbar } from '../../components/navbar/navbar';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -15,13 +15,17 @@ import { CommonModule } from '@angular/common';
 })
 export class PortfolioComponent implements OnInit{
   protected readonly title = signal('Fede-meli-portfolio');
+  idProyecto!: number;
   public proyectos: Proyecto[] = [];
   public habilidades: Habilidad[] = [];
 
-  constructor(private proySrv: ProyectsService){}
+  constructor(private proySrv: ProyectsService,
+    private route: ActivatedRoute
+  ){}
 
 
   ngOnInit(): void{
+    this.idProyecto = Number(this.route.snapshot.paramMap.get('id'));
     this.proySrv.getAll().subscribe({
       next: data => this.proyectos = data,
       error: err=> console.error('Error cargando proyectos', err),
