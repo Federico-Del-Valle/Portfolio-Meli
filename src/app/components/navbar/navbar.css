@@ -1,9 +1,13 @@
 .buscador-proyectos{
   position: relative;
+  width: 100%;
+}
+
+.nav-link{
+  margin-right: 20px;
 }
 
 .lupa-buscar{
   position: absolute;
-  left: 78%;
-  top: 2%;
+  left: 50%;
 }

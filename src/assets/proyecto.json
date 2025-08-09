@@ -6,7 +6,7 @@
       "precio": 100,
       "lenguajes":"Typescript, Html, Css, Angular",
       "imgPortada": "/assets/img/FedeCV.jpeg",
-      "llega": "Terminado",
+      "llega": true,
       "cuotas": "6 cuotas sin interes",
       "img": [
       "/assets/img/proyectoEnProceso2.jpg",
@@ -22,7 +22,7 @@
       "lenguajes": "Typescript,SPRING, Java",
       "imgPortada": "/assets/img/proyectEnProceso.jpg",
       "estrellas": [1,2,3,4,5],
-      "llega": "En Proceso",
+      "llega": false,
       "img": [
       "/assets/img/proyectoEnProceso2.jpg",
       "/assets/img/proyectoEnProceso2.jpg",
@@ -36,7 +36,7 @@
       "descripcion":"Proyecto final realizado para globant CodeYourFuture",
       "lenguajes":"C, JAVA",
       "imgPortada": "/assets/img/proyectoEnProceso2.jpg",
-      "llega": "En Proceso",
+      "llega": false,
       "img": [
       "/assets/img/proyectoEnProceso2.jpg",
       "/assets/img/proyectoEnProceso2.jpg",
@@ -49,7 +49,7 @@
       "precio": 20,
       "descripcion":"Proyecto de control de estacionamiento en la ciudad de Buenos Aires",
       "lenguajes":"Angular, JAVA, MySql, Spring",
-      "llega": "En Proceso",
+      "llega": false,
       "imgPortada": "/assets/img/proyectoEnProceso2.jpg",
       "img": [
       "/assets/img/proyectoEnProceso2.jpg",
@@ -63,7 +63,7 @@
       "precio": 204,
       "descripcion":"Gestor de instrumentos realizado para Wise capital. Me desempeñe como Full Stack Developer en el desarrollo de una aplicacion de control de instrumentos",
       "lenguajes":"Angular, JAVA, MySql, Hibernate, Spring",
-      "llega": "En Proceso",
+      "llega": false,
       "imgPortada": "/assets/img/proyectoEnProceso2.jpg",
       "img": [
       "/assets/img/proyectoEnProceso2.jpg",

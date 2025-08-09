@@ -11,6 +11,7 @@ import { RouterLink } from '@angular/router';
 })
 export class HomeComponent implements OnInit{
   categorias: { nombre: string, cantidad: number }[] = [];
+  soloTerminados = false;
 
 
   public proyectos: Proyecto[] = [];
@@ -41,6 +42,15 @@ export class HomeComponent implements OnInit{
       nombre,
       cantidad
     }));
+  }
+  onToggleTerminados(ev: Event) {
+    this.soloTerminados = (ev.target as HTMLInputElement).checked;
+  }
+
+  get proyectosFiltrados(): Proyecto[] {
+    return this.soloTerminados
+      ? this.proyectos.filter(p => p.llega) // solo terminados
+      : this.proyectos;                     // todos
   }
 
 

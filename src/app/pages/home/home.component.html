@@ -11,15 +11,43 @@
           <h1 class="m-0" style="font-size: 20px;">Federico Del Valle</h1>
           <span style="font-size: 14px; color: #333333;">1 resultado</span>
         </div>
-        <div>
+        <div class="d-flex flex-column barra">
+          <div class="d-flex flex-column filtros">
+            <div class="cuadrado-filtro d-flex flex-row justify-content-between align-items-center">
+              <span>Terminado</span>
+              <label class="switch">
+                <input type="checkbox" [checked]="soloTerminados"
+                (change)="onToggleTerminados($event)" id="toggleBtn">
+                <span class="slider"></span>
+              </label>
+
+            </div>
+            <div class="cuadrado-filtro d-flex flex-row justify-content-between align-items-center">
+              <span>Terminado</span>
+              <label class="switch">
+                <input type="checkbox" id="toggleBtn">
+                <span class="slider"></span>
+              </label>
+
+            </div>
+            <div class="cuadrado-filtro d-flex flex-row justify-content-between align-items-center">
+              <span>Terminado</span>
+              <label class="switch">
+                <input type="checkbox" id="toggleBtn">
+                <span class="slider"></span>
+              </label>
+
+            </div>
+          </div>
 
           @if (categorias) {
-            <h3 style="font-size: 16px; font-weight: 600;">Categorias</h3>
-            @for (categoria of categorias; track $index) {
-              <h5 style="font-size: 14px; font-weight: 300; color:#666 ;">{{categoria.nombre}}
-                 <span style="color: #999;">({{categoria.cantidad}})</span></h5>
-            }
-
+            <div>
+              <h3 style="font-size: 16px; font-weight: 600;">Categorias</h3>
+              @for (categoria of categorias; track $index) {
+                <h5 style="font-size: 14px; font-weight: 300; color:#666 ;">{{categoria.nombre}}
+                  <span style="color: #999;">({{categoria.cantidad}})</span></h5>
+              }
+            </div>
           }
 
         </div>
@@ -28,8 +56,12 @@
 
     </div>
     <div class="parte-der">
+      <div class="filtros-proyectos d-flex flex-row" style="justify-content: flex-end;">
+        <span>Ordenar por</span>
+        <div class="ui-search-sort-filter"></div>
+      </div>
       <div class="d-flex flex-column contenedor-info">
-        @for (proyecto of proyectos; track $index) {
+        @for (proyecto of proyectosFiltrados; track $index) {
           <a [routerLink]= "['/portfolio', proyecto.id]">
             <div class="d-flex flex-row contenedor-proy" style="gap: 24px;">
               <img class="foto" src="{{proyecto.imgPortada}}">
@@ -45,10 +77,12 @@
                       }
                       @if(proyecto.llega){
                         <div class="llega-container">
-                          <span class="llega">{{proyecto.llega}}</span>
-
+                          <span class="llega">Terminado</span>
                         </div>
-
+                      }@else {
+                        <div class="llega-container">
+                          <span class="llega">En proceso</span>
+                        </div>
                       }
 
                     </div>

@@ -6,7 +6,7 @@ export interface Proyecto{
   imgPortada: string;
   cuotas?:string;
   estrellas?: number[];
-  llega?: string;
+  llega?: boolean;
   precio?: number;
   img?: string[];
   url?: string;
