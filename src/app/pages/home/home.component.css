@@ -8,6 +8,33 @@ padding: 0 100px;
   padding: 8px;
   background-color: #fff;
 }
+a{
+  color: #111;
+  text-decoration: none;
+  .titulo {
+    font-weight: 300;
+  }
+  .autor{
+     color: rgba(0,0,0,.55);
+  }
+}
+
+.precio-prin{
+  font-size: 24px;
+}
+.llega-container{
+  background-color: #a9e6c354;
+  width: fit-content;
+  border-radius: 4px;
+  padding: 0 4px;
+  .llega{
+    font-size: 14px;
+    font-weight: 600;
+    color: #00a650;
+  }
+
+}
+
 
 
 .foto{
@@ -24,6 +51,7 @@ padding: 0 100px;
   max-width: 244px;
   min-width: 210px;
   height: 500px;
+  gap: 16px;
 }
 
 

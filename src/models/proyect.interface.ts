@@ -4,6 +4,10 @@ export interface Proyecto{
   descripcion?: string;
   lenguajes?: string;
   imgPortada: string;
+  cuotas?:string;
+  estrellas?: number[];
+  llega?: string;
+  precio?: number;
   img?: string[];
   url?: string;
   repo?: string;

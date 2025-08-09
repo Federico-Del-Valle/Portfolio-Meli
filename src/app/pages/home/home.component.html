@@ -5,22 +5,27 @@
   <div class="d-flex flex-row justify-content-between contenedor-principal">
 
     <div class="parte-izq">
-      <div >
-        <span>Ingenieros Informaticos > Desarrolladores de Software</span>
-        <h1>Federico Del Valle</h1>
-        <span>1 resultado</span>
-      </div>
-      <div>
-        @if (categorias) {
-          <h3>Categorias</h3>
-          @for (categoria of categorias; track $index) {
-            <h5 style="font-size: 14px; font-weight: 300; color:#666 ;">{{categoria.nombre}}
-               <span style="color: #999;">({{categoria.cantidad}})</span></h5>
+      <div class="d-flex flex-column" style="gap: 16px;" >
+        <span style="color: #666; font-size: 14px;">Ingenieros Informaticos > Desarrolladores de Software</span>
+        <div>
+          <h1 class="m-0" style="font-size: 20px;">Federico Del Valle</h1>
+          <span style="font-size: 14px; color: #333333;">1 resultado</span>
+        </div>
+        <div>
+
+          @if (categorias) {
+            <h3 style="font-size: 16px; font-weight: 600;">Categorias</h3>
+            @for (categoria of categorias; track $index) {
+              <h5 style="font-size: 14px; font-weight: 300; color:#666 ;">{{categoria.nombre}}
+                 <span style="color: #999;">({{categoria.cantidad}})</span></h5>
+            }
+
           }
 
-        }
+        </div>
 
       </div>
+
     </div>
     <div class="parte-der">
       <div class="d-flex flex-column contenedor-info">
@@ -29,17 +34,36 @@
             <div class="d-flex flex-row contenedor-proy" style="gap: 24px;">
               <img class="foto" src="{{proyecto.imgPortada}}">
               <div class="derecha-proyecto" style="width: 50%;">
-                <h3>{{proyecto.titulo}}</h3>
-                <span>Por Federico Del Valle</span>
-                <div class="contenedor-datos-proy">
+                <h3 class="titulo">{{proyecto.titulo}}</h3>
+                <span class="autor">Por Federico Del Valle <img width="20px" src="assets/icons/verified-icon.svg" alt=""></span>
+                <div class="d-flex flex-row contenedor-datos-proy">
                   <div class="der">
                     <div class="d-flex flex-column">
-                      <span>$157</span>
-                      <span>$180</span>
-                      <span>6 cuotas de $1500</span>
+                      <span class="precio-prin">${{proyecto.precio}}</span>
+                      @if (proyecto.cuotas) {
+                        <span>{{proyecto.cuotas}}</span>
+                      }
+                      @if(proyecto.llega){
+                        <div class="llega-container">
+                          <span class="llega">{{proyecto.llega}}</span>
+
+                        </div>
+
+                      }
+
                     </div>
                   </div>
-                  <div class="izq"></div>
+                  @if (proyecto.estrellas) {
+                    <div class="d-flex flex-row justify-content-start justify-content-between" style="gap: 4px;height: 16px; margin-top: 8px;">
+                      @for (_ of proyecto.estrellas; track $index) {
+
+                          <img src="assets/icons/star-icon.svg" alt="">
+                      }
+                    </div>
+
+
+                  }
+
 
                 </div>
               </div>
