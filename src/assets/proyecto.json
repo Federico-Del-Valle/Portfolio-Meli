@@ -2,7 +2,7 @@
     {
       "id":0,
       "titulo":"Portfolio",
-      "descripcion": "Portolio personal",
+      "descripcion": "Portolio personal con fines didacticos. Es una breve imitacion de lo que vendria a ser el buscador de productos que dispone mercado libre, solo que en vez de productos, encontramos proyectos. Me parecio algo creativo y me gusto",
       "precio": 100,
       "lenguajes":"Typescript, Html, Css, Angular",
       "imgPortada": "/assets/img/FedeCV.jpeg",
@@ -36,7 +36,7 @@
       "descripcion":"Proyecto final realizado para globant CodeYourFuture",
       "lenguajes":"C, JAVA",
       "imgPortada": "/assets/img/proyectoEnProceso2.jpg",
-      "llega": false,
+      "llega": true,
       "img": [
       "/assets/img/proyectoEnProceso2.jpg",
       "/assets/img/proyectoEnProceso2.jpg",

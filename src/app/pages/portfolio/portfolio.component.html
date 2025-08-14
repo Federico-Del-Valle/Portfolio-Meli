@@ -1,97 +1,121 @@
 <div class="contenedor-interno">
   <div>Tambien puede interesarte</div>
-  <div class="contenedor-info">
+  <div class="d-flex flex-row" style="background-color: #ffff;">
+    <div class="contenedor-info">
+      <div class="parte-izq">
+        <div style="padding: 16px;">
+          <div class="d-flex flex-row">
+            <div class="d-flex flex-column">
+              <div class="foto-container d-flex flex-column" style="gap: 4px;">
+                @for(foto of proyectos[idProyecto].img; track $index) {
+                  <img class="foto" [src]="foto">
+                }
 
-    <div class="parte-izq">
-      <div style="padding: 16px;">
-        <div class="d-flex flex-row justify-content-between">
-          <div class="d-flex flex-column">
-            <div class="foto-container d-flex flex-column" style="gap: 4px;">
-              @for(foto of proyectos[idProyecto].img; track $index) {
-                <img class="foto" [src]="foto">
-              }
+              </div>
 
             </div>
 
+            <figure>
+              <img class="foto-principal" src="{{proyectos[idProyecto].imgPortada}}" alt=""></figure>
           </div>
-
-          <figure>
-            <img class="foto-principal" src="{{proyectos[idProyecto].imgPortada}}" alt=""></figure>
         </div>
+        <div></div>
       </div>
-      <div></div>
-    </div>
-    <div class="parte-der">
-      <a href="">Ver proyectos</a>
-      <div class="info-fede">
-        <div>
-          <span>Nuevo | 0 Vendidos</span>
-        </div>
-        <div>
-          <div class="d-flex" style="gap: 8px;">
-            <div>
-              <span>Mas vendido</span>
-            </div>
-            <div>
-              <span> 5to en Portfolios</span>
-            </div>
-          </div>
-          <div class="titulo">
-            <h1 class="nombre">{{proyectos[idProyecto].titulo}}</h1>
-          </div>
-        </div>
-        <div class="precio-container">
-          <div class="d-flex flex-column justify-content-start">
-            <span style="font-size: 36px; font-weight: 300;">Gratis</span>
-            <span style="font-size: 18px; font-weight: 400;">datos...</span>
-            <span>datos...</span>
-
+      <div class="parte-der">
+        <a href="">Ver proyectos</a>
+        <div class="info-fede">
+          <div>
+            <span>Nuevo | 0 Vendidos</span>
           </div>
           <div>
-            <a href="">Ver informacion del producto</a>
+            <div class="d-flex" style="gap: 8px;">
+              <div>
+                <span>Mas vendido</span>
+              </div>
+              <div>
+                <span> 5to en Portfolios</span>
+              </div>
+            </div>
+            <div class="titulo">
+              <h1 class="nombre">{{proyectos[idProyecto].titulo}}</h1>
+            </div>
           </div>
+          <div class="precio-container">
+            <div class="d-flex flex-column justify-content-start">
+              <span style="font-size: 36px; font-weight: 300;">Gratis</span>
+              <span style="font-size: 18px; font-weight: 400;"></span>
+
+            </div>
+            <div>
+              <a href="">Ver informacion del producto</a>
+            </div>
+          </div>
+          <div>
+            <div class="titulo-informacion-prod">
+              <span>Lo que tenes que saber de este producto</span>
+            </div>
+              <div class="contenido-info-prod">
+                <li > Lenguajes: {{proyectos[idProyecto].lenguajes}}</li>
+              </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="descripcion-container d-flex flex-column">
+        <div class="titulo-descripcion">
+          <span>Descripcion</span>
+        </div>
+        <div class="descripcion">
+          <span>{{proyectos[idProyecto].descripcion}}
+          </span>
+        </div>
+      </div>
+
+    </div>
+    <div class="contenedor-botones">
+      <form action="" class="d-flex flex-column">
+        <div class="d-flex flex-column" style="font-size: 16px; color: green;">
+          <span>{{proyectos[idProyecto].llega}}</span>
+          <span>llega gratis mañana</span>
         </div>
         <div>
-          <div class="titulo-informacion-prod">
-            <span>Informacion del producto</span>
-          </div>
-            <div class="contenido-info-prod">
-
-              <li> Lenguajes: {{proyectos[idProyecto].lenguajes}}</li>
-            </div>
-
+          <span style="color: green; font-weight: 600; font-size: 20px;">Entra gratis</span>
+          <span> en cualquier momento del dia</span>
+        </div>
+        <div style="font-size: 20px; font-weight: 600;">
+          <span>Stock </span>
+          @if(proyectos[idProyecto].llega){
+              <span class="llega">Disponible</span>
+          }@else {
+              <span class="llega">En proceso</span>
+          }
+        </div>
+        <div class="botones d-flex flex-column" style=" gap: 8px;">
+          <button class="btn-compra">Comprar ahora</button>
+          <button class="btn-carrito">Agregar al carrito</button>
         </div>
 
+        <div>
+          <span style="font-size: 12px;">Vendido por </span>
+          <span style="color: rgb(0, 110, 255); font-size: 15px; font-weight: 500;">Federico Del Valle</span>
+        </div>
+      </form>
 
-
-      </div>
     </div>
 
+    <!-- <div class="contenedor-habilidades">
 
-    <div class="descripcion-container">
-      <div class="titulo-descripcion">
-        <span>Descripcion</span>
-      </div>
-      <div class="descripcion">
-        <span>{{proyectos[idProyecto].descripcion}}
-        </span>
-      </div>
-    </div>
+      <div class="habilidades">
+        <div class="d-flex justify-content-center" style="gap: 8px;">
+          @for (habilidad of habilidades; track $index) {
+            <img class="habilidad-container" src="{{habilidad.img}}" alt="">
+          }
+        </div>
 
+      </div>
+
+    </div> -->
   </div>
-
-  <!-- <div class="contenedor-habilidades">
-
-    <div class="habilidades">
-      <div class="d-flex justify-content-center" style="gap: 8px;">
-        @for (habilidad of habilidades; track $index) {
-          <img class="habilidad-container" src="{{habilidad.img}}" alt="">
-        }
-      </div>
-
-    </div>
-
-  </div> -->
-
 </div>
 

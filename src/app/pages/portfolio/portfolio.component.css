@@ -9,9 +9,9 @@
 }
 
 .contenedor-info{
-  background-color: #ffff;
+  padding: 16px;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2fr 1.2fr;
 }
 
 .titulo{
@@ -58,11 +58,11 @@
     display: block;
 }
 
-
 .descripcion-container{
   padding: 0 24px;
-  border-top: 1px solid gray;
-  border-bottom: 1px solid gray;
+  border-top: 1px solid #0000001a;
+  border-bottom: 1px solid #0000001a;
+  gap: 8px;
 }
 .titulo-descripcion{
   font-size: 24px;
@@ -70,4 +70,33 @@
 .descripcion{
   font-size: 20px;
   color: #999;
+}
+
+.contenedor-botones{
+  margin: 24px 8px;
+  padding: 25px 16px;
+  border: 1px solid #0000001a;
+  border-radius: 8px;
+}
+
+.btn-compra{
+  padding: 0 24px;
+  height: 48px;
+  border-color: transparent;
+  border-radius: 6px;
+  background-color: #3483fa;
+  font-weight: 600;
+  color: #ffff;
+  font-size: 16px;
+}
+
+.btn-carrito{
+  padding: 0 24px;
+  height: 48px;
+  border-color: transparent;
+  border-radius: 6px;
+  background-color: #4189e626;
+  font-weight: 600;
+  color: #3483fa;
+  font-size: 16px;
 }
