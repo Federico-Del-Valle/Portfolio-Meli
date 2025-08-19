@@ -1,67 +1,71 @@
 <div class="contenedor-interno">
   <div>Tambien puede interesarte</div>
   <div class="d-flex flex-row" style="background-color: #ffff;">
-    <div class="contenedor-info">
-      <div class="parte-izq">
-        <div style="padding: 16px;">
-          <div class="d-flex flex-row">
-            <div class="d-flex flex-column">
-              <div class="foto-container d-flex flex-column" style="gap: 4px;">
-                @for(foto of proyectos[idProyecto].img; track $index) {
-                  <img class="foto" [src]="foto">
-                }
+    <div class="d-flex flex-column">
+      <div class="contenedor-info">
+        <div class="parte-izq">
+          <div style="padding: 16px;">
+            <div class="d-flex flex-row">
+              <div class="d-flex flex-column">
+                <div class="foto-container d-flex flex-column" style="gap: 4px;">
+                  @for(foto of proyectos[idProyecto].img; track $index) {
+                    <img class="foto" [src]="foto">
+                  }
+
+                </div>
 
               </div>
 
+              <figure>
+                <img class="foto-principal" src="{{proyectos[idProyecto].imgPortada}}" alt=""></figure>
             </div>
-
-            <figure>
-              <img class="foto-principal" src="{{proyectos[idProyecto].imgPortada}}" alt=""></figure>
           </div>
+          <div></div>
         </div>
-        <div></div>
-      </div>
-      <div class="parte-der">
-        <a href="">Ver proyectos</a>
-        <div class="info-fede">
-          <div>
-            <span>Nuevo | 0 Vendidos</span>
-          </div>
-          <div>
-            <div class="d-flex" style="gap: 8px;">
-              <div>
-                <span>Mas vendido</span>
-              </div>
-              <div>
-                <span> 5to en Portfolios</span>
-              </div>
-            </div>
-            <div class="titulo">
-              <h1 class="nombre">{{proyectos[idProyecto].titulo}}</h1>
-            </div>
-          </div>
-          <div class="precio-container">
-            <div class="d-flex flex-column justify-content-start">
-              <span style="font-size: 36px; font-weight: 300;">Gratis</span>
-              <span style="font-size: 18px; font-weight: 400;"></span>
-
+        <div class="parte-der">
+          <a href="">Ver proyectos</a>
+          <div class="info-fede">
+            <div>
+              <span>Nuevo | 0 Vendidos</span>
             </div>
             <div>
-              <a href="">Ver informacion del producto</a>
-            </div>
-          </div>
-          <div>
-            <div class="titulo-informacion-prod">
-              <span>Lo que tenes que saber de este producto</span>
-            </div>
-              <div class="contenido-info-prod">
-                <li > Lenguajes: {{proyectos[idProyecto].lenguajes}}</li>
+              <div class="d-flex" style="gap: 8px;">
+                <div>
+                  <span>Mas vendido</span>
+                </div>
+                <div>
+                  <span> 5to en Portfolios</span>
+                </div>
               </div>
+              <div class="titulo">
+                <h1 class="nombre">{{proyectos[idProyecto].titulo}}</h1>
+              </div>
+            </div>
+            <div class="precio-container">
+              <div class="d-flex flex-column justify-content-start">
+                <span style="font-size: 36px; font-weight: 300;">Gratis</span>
+                <span style="font-size: 18px; font-weight: 400;"></span>
+
+              </div>
+              <div>
+                <a href="">Ver informacion del producto</a>
+              </div>
+            </div>
+            <div>
+              <div class="titulo-informacion-prod">
+                <span>Lo que tenes que saber de este producto</span>
+              </div>
+                <div class="contenido-info-prod">
+                  <li > Lenguajes: {{proyectos[idProyecto].lenguajes}}</li>
+                </div>
+            </div>
           </div>
         </div>
+
+
+
+
       </div>
-
-
       <div class="descripcion-container d-flex flex-column">
         <div class="titulo-descripcion">
           <span>Descripcion</span>
@@ -71,16 +75,15 @@
           </span>
         </div>
       </div>
-
     </div>
+
     <div class="contenedor-botones">
       <form action="" class="d-flex flex-column">
-        <div class="d-flex flex-column" style="font-size: 16px; color: green;">
-          <span>{{proyectos[idProyecto].llega}}</span>
-          <span>llega gratis mañana</span>
+        <div class="d-flex flex-column" style="font-size: 16px; color: #00a650;">
+          <span>Llega gratis mañana</span>
         </div>
         <div>
-          <span style="color: green; font-weight: 600; font-size: 20px;">Entra gratis</span>
+          <span style="color: #00a650; font-weight: 600; font-size: 20px;">Entra gratis</span>
           <span> en cualquier momento del dia</span>
         </div>
         <div style="font-size: 20px; font-weight: 600;">
@@ -99,6 +102,21 @@
         <div>
           <span style="font-size: 12px;">Vendido por </span>
           <span style="color: rgb(0, 110, 255); font-size: 15px; font-weight: 500;">Federico Del Valle</span>
+        </div>
+
+        <div class="devoluciones">
+          <div>
+            <img src="assets/icons/return-botones.svg" width="20px" alt="">
+            <span style="color: #3483fa;">Devolucion gratis</span>
+             tenes 30 dias desde que lo recibís.
+          </div>
+          <div>
+            <img src="assets/icons/shield-icon.svg" width="20px" alt="">
+            <span style="color: #3483fa;">Compra protegida</span>
+            , recibi el producto que esperabas o te devolvemos el dinero
+
+          </div>
+
         </div>
       </form>
 
